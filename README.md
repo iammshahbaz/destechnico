@@ -41,9 +41,12 @@ This is a simple e-commerce application REST API built with Node.js, Express.js,
     ```
 4. Create a `.env` file in the root directory and add the following environment variables:
     ```bash
-    PORT=5000
-    DATABASE_URL=your_postgresql_database_url
-    JWT_SECRET=your_jwt_secret
+    DB_HOST=localhost
+    DB_PORT=5432
+    DB_USER=postgres
+    DB_PASSWORD=shahbaz
+    DB_NAME=ecommerce
+    JWT_SECRET=shahbaz
     ```
 
 5. Set up the PostgreSQL database by creating the necessary tables. You can use a migration tool like `pg-migrate` or manually execute SQL commands.
