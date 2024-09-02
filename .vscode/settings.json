@@ -8,8 +8,8 @@
             "name": "PG Local",
             "database": "ecommerce",
             "username": "postgres",
-            "password": "shahbaz",
-            "connectionTimeout": 30
+            "connectionTimeout": 30,
+            "password": "shahbaz"
         }
     ]
 }
