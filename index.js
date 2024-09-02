@@ -25,5 +25,11 @@ app.use((req, res) => {
     res.status(404).json({ message: 'Resource not found.' });
 });
 
-const PORT = process.env.PORT;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+app.listen(process.env.DB_PORT, async () => {
+    try {
+        console.log("connected to db");
+        console.log(`Server is running at ${process.env.DB_PORT}`)
+    } catch (error) {
+        console.log("Error connecting to db")
+    }
+})
