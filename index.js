@@ -11,6 +11,12 @@ const app = express();
 
 app.use(cors());
 app.use(bodyParser.json());
+
+
+app.get("/", async (req, res) => {
+    res.send("Welcome to Homepage ")
+})
+
 app.use('/api/users', userRouter);
 app.use('/api/seller', sellerRouter);
 app.use('/api/buyer', buyerRouter);
