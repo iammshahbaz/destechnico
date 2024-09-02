@@ -9,14 +9,12 @@ const pool = new Pool({
     database: process.env.DB_NAME,
 });
 
-pool.connect((err, client, done) => {
-    if (err) {
-        console.error('Error connecting to the database', err.stack);
-        process.exit(1);
-    } else {
-        console.log('Database connected');
-        done();
-    }
+pool.on('connect', () => {
+    console.log('Connected to the PostgreSQL database');
+});
+
+pool.on('error', (err) => {
+    console.error('Error connecting to the PostgreSQL database:', err);
 });
 
 
